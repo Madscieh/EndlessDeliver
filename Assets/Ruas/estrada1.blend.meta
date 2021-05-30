@@ -3,29 +3,9 @@ guid: 46cf49ab06570234e946e483853c1f69
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Cal\xE7ada v\xE3os"
-    second: {fileID: 2100000, guid: 65ce78a6e34c53e47a99ef0bdb070f6d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Materiais.003
-    second: {fileID: 2100000, guid: 9d51610b7c201684c8b91cc3326c9367, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: d690772827e3f0a4f826cf76666c835b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: asfalto
-    second: {fileID: 2100000, guid: 2017818acdeb75a43824ba576c1e7874, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0

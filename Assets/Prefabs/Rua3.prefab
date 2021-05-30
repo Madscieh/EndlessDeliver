@@ -179,11 +179,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4065356175476118318, guid: 46370be7296314547bd661d31bc861ef,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: -223171405793649613, guid: 46370be7296314547bd661d31bc861ef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abfd255d360b92d4fa008d1288890c19, type: 2}
     - target: {fileID: 919132149155446097, guid: 46370be7296314547bd661d31bc861ef,
         type: 3}
       propertyPath: m_Name
       value: EstradaAlien
       objectReference: {fileID: 0}
+    - target: {fileID: 2107566865296145841, guid: 46370be7296314547bd661d31bc861ef,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2107566865296145841, guid: 46370be7296314547bd661d31bc861ef,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501631516511343267, guid: 46370be7296314547bd661d31bc861ef,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 67f2d0f1ad0ba034c99e74bb6f9db49c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46370be7296314547bd661d31bc861ef, type: 3}
 --- !u!4 &7496096601286050223 stripped

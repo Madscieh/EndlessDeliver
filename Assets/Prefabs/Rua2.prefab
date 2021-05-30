@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "EstradaPalha\xE7o"
       objectReference: {fileID: 0}
+    - target: {fileID: 6213600735511443924, guid: 49cac5069ebf7ab4598d4ec21e733ce3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.94
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49cac5069ebf7ab4598d4ec21e733ce3, type: 3}
 --- !u!4 &6636335735049894139 stripped
