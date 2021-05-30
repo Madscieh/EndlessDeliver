@@ -3,29 +3,9 @@ guid: 49cac5069ebf7ab4598d4ec21e733ce3
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Cal\xE7adaTopo"
-    second: {fileID: 2100000, guid: e7f7e02f44ecf7046893c717a889a214, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Grama
-    second: {fileID: 2100000, guid: fb4d38766a27bc7459b94b79ebec24d0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Materiais
-    second: {fileID: 2100000, guid: e3fb11f4d593f8846952bd198ac41108, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Materiais.002
-    second: {fileID: 2100000, guid: fd5256207d3ce88418b13d8340ad4302, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0

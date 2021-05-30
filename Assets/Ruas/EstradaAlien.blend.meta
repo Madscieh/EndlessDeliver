@@ -3,39 +3,9 @@ guid: 46370be7296314547bd661d31bc861ef
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Grama
-    second: {fileID: 2100000, guid: 03c8e9046dbb664419e6fd9ffc0fc850, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Materiais
-    second: {fileID: 2100000, guid: 4ab7babe21ec493489cf4d95f41301e2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Materiais.011
-    second: {fileID: 2100000, guid: f849ed7ae81dbbe49b868126f703af2c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: asfalto
-    second: {fileID: 2100000, guid: badb3d48774296a4bb1dfcffc29dfdef, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: cogumelos
-    second: {fileID: 2100000, guid: ea19942c33c0d0846bf01fa7e83fe83c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: fundocogumleo
-    second: {fileID: 2100000, guid: d249d0cf11e5ec04091df315a9f1e69e, type: 2}
+  externalObjects: {}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
