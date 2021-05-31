@@ -22,7 +22,7 @@ public class BuildingSpawnerLeft : MonoBehaviour
         GameObject tempLeft = Instantiate(building[Random.Range(0, numberOfBuildingAssets)], nextSpawnPoint, Quaternion.identity);
         // Posicao do proximo tile: esta no segundo filho do prefab,
         // por isso o 1 em GetChild(1), lembrando que conta a partir do zero
-        nextSpawnPoint = tempLeft.transform.GetChild(1).transform.position;
+        nextSpawnPoint = tempLeft.transform.GetChild(0).transform.position;
     }
 
     // Funcao para instanciar os predios iniciais da cena

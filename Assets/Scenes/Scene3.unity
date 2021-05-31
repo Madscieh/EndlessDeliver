@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -261,7 +261,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1420168917}
+      objectReference: {fileID: 2044677551}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba8e42857d4b4374ebaa4a490f56f571, type: 3}
 --- !u!1001 &1169281195
@@ -340,6 +340,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7523117050229504490, guid: a63d7838a38bef84b98cb2dcbceb0866,
+        type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 2044677553}
     - target: {fileID: 7523117050229504491, guid: a63d7838a38bef84b98cb2dcbceb0866,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -402,12 +407,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a63d7838a38bef84b98cb2dcbceb0866, type: 3}
---- !u!4 &1420168917 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7523117051476153493, guid: a63d7838a38bef84b98cb2dcbceb0866,
-    type: 3}
-  m_PrefabInstance: {fileID: 1420168916}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1968107122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -546,3 +545,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f1bcb227d04a684189353dfbd35e73b, type: 3}
+--- !u!4 &2044677551 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2114439148373140499, guid: a63d7838a38bef84b98cb2dcbceb0866,
+    type: 3}
+  m_PrefabInstance: {fileID: 1420168916}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &2044677553 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5719116450097049472, guid: a63d7838a38bef84b98cb2dcbceb0866,
+    type: 3}
+  m_PrefabInstance: {fileID: 1420168916}
+  m_PrefabAsset: {fileID: 0}
