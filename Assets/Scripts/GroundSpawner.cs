@@ -9,7 +9,7 @@ public class GroundSpawner : MonoBehaviour
     private Vector3 nextSpawnPoint;
     // 3) Numero inicial de tiles a ser mantido no jogo
     // na medida em que outros são criados na frente e destruidos atras
-    private int numberOfTiles = 12;
+    private int numberOfTiles = 20;
 
     // Funcao que instancia novos tiles na cena
     // Obs: eh utilizada no script GroundTile, por isso eh public

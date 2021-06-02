@@ -6,12 +6,12 @@ public class BuildingSpawnerRight : MonoBehaviour
     // 1) Lista de predios
     public GameObject[] building;
     // 2) Numero de assets de predios
-    private int numberOfBuildingAssets = 8;
+    private int numberOfBuildingAssets = 4;
     // 3) Posicao onde termina um predio e comeca o proximo
     private Vector3 nextSpawnPoint;
     // 4) Numero inicial de predios a ser mantido no jogo
     // na medida em que outros são criados na frente e destruidos atras
-    private int numberOfBuildings = 30;
+    private int numberOfBuildings = 8;
 
     // Funcao que instancia novos predios na cena
     // Obs: eh utilizada no script Buildings, por isso eh public
