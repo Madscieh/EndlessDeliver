@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 7523117050229504490}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,9 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3017a3f3c97be3f4297909bc043062a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  speedForward: 5
-  speedHorizontal: 8
+  rb: {fileID: 5719116450097049472}
 --- !u!1001 &1935780718332904440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,11 +151,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharacterTextura
       objectReference: {fileID: 0}
+    - target: {fileID: 1350270225205255384, guid: 99e8b2062268fd340beb279d37ff3cd0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c8860ccd2a8e29c439a026494a6371d1, type: 2}
     - target: {fileID: 3080638891159490264, guid: 99e8b2062268fd340beb279d37ff3cd0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7b2faaf7e2671c5489e1284f00b8260f, type: 2}
+      objectReference: {fileID: 3498384624342873181, guid: 99e8b2062268fd340beb279d37ff3cd0,
+        type: 3}
     - target: {fileID: 5992060667538440153, guid: 99e8b2062268fd340beb279d37ff3cd0,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

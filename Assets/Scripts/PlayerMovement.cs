@@ -1,32 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     // Declaracao de variaveis:
     // 1) Rigidbody: componente do objeto onde a fisica acontece
-    public Rigidbody rb;
+    [SerializeField] private Rigidbody rb;
     // 2) Controle Horizontal:
-    private float horizontalInput;
+    private float _horizontalInput;
     // 3) Velocidades:
-    public float speedForward = 8;
-    public float speedHorizontal = 8;
+    private readonly float speedForward = 8;
+    private readonly float speedHorizontal = 8;
     // 4) Distancia: para controlar indiretamente a duracao
-    public float distance = 50f;
+    private readonly float distance = 500f;
 
     // Funcao que implementa o movimento na cena
-    private void FixedUpdate()
+    private void Update()
     {
         // Input Horizontal Padrão da Unity: a = esquerda, d = direita
-        horizontalInput = Input.GetAxis("Horizontal");
+        _horizontalInput = Input.GetAxis("Horizontal");
 
         // Componentes vetoriais do movimento:
 
         // 1) Componente profundidade (eixo z: frente = positivo)
-        Vector3 forwardMove = transform.forward * speedForward * Time.fixedDeltaTime;
+        Vector3 forwardMove = transform.forward * speedForward * Time.deltaTime;
         // 2) Componente horizontal (eixo x: direita = positivo)
-        Vector3 horizontalMove = transform.right * horizontalInput * speedHorizontal * Time.fixedDeltaTime;
+        Vector3 horizontalMove = transform.right * _horizontalInput * speedHorizontal * Time.deltaTime;
         // Condicao de parada: rb.transform.position.z >= distance
         if (rb.transform.position.z < distance)
         {

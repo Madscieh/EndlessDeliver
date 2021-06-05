@@ -4,13 +4,13 @@ public class BuildingsLeft : MonoBehaviour
 {
     // Declaracao de variavel:
     // 1) Objeto do script BuildingSpawner
-    private BuildingSpawnerLeft buildingSpawnerLeft;
+    private BuildingSpawnerLeft _buildingSpawnerLeft;
 
     // Inicializa a variavel buildingSpawner
-    void Start()
+    private void Start()
     {
         // Declara variavel como objeto sujeito ao script GroundSpawner
-        buildingSpawnerLeft = GameObject.FindObjectOfType<BuildingSpawnerLeft>();
+        _buildingSpawnerLeft = GameObject.FindObjectOfType<BuildingSpawnerLeft>();
     }
 
     // Funcao que cria predios na frente e destroi aqueles
@@ -18,7 +18,7 @@ public class BuildingsLeft : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // Cria buildings com funcao SpawnBuilding do script BuildingSpawner
-        buildingSpawnerLeft.SpawnBuildingLeft();
+        _buildingSpawnerLeft.SpawnBuildingLeft();
         // Destroi building colidido, com espera de 2s
         Destroy(gameObject, 2);
     }
