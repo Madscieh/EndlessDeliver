@@ -3,20 +3,20 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    private bool pause = false;
+    private bool _pause = false;
     [SerializeField] private Text _coinCounter;
 
     public void Pause()
     {
-        if (!pause)
+        if (!_pause)
         {
             Time.timeScale = 0;
-            pause = true;
+            _pause = true;
         }
         else
         {
             Time.timeScale = 1;
-            pause = false;
+            _pause = false;
         }
     }
 

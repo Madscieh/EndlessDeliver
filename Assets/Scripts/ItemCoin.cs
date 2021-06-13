@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ItemCoin : MonoBehaviour
 {
@@ -12,12 +10,12 @@ public class ItemCoin : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        transform.rotation = Quaternion.Euler(0, 50 * Time.time, 0);
+        transform.rotation = Quaternion.Euler(0, 75 * Time.time, 0);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        MainManager.Instance.ContadorDeMoedas();
+        MainManager.instance.ContadorDeMoedas();
         _audio.Play();
         Destroy(gameObject, .2f);
     }

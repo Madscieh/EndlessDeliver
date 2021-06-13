@@ -7,7 +7,7 @@ public class ItemObstacle : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.rotation = Quaternion.Euler(0, 50 * Time.time, 0);
+        transform.rotation = Quaternion.Euler(0, 75 * Time.time, 0);
     }
 
     private void OnTriggerEnter(Collider other)

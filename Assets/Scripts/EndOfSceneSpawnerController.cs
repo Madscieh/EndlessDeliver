@@ -8,7 +8,7 @@ public class EndOfSceneSpawnerController : MonoBehaviour
     // 2) Lista de objetos:
     [SerializeField] private GameObject[] _items;
     // 3) Posicao inicial:
-    private Vector3 _initialPosition = new Vector3( 0f, 0f, 80f);
+    private Vector3 _initialPosition = new Vector3( 0f, 0f, 40f);
     // 3) Posicoes das pista:
     [SerializeField] private Vector3[] _lanePosition;
     // 4) Marcadores de tempo para instanciacao de items:

@@ -1,21 +1,18 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.PlayerLoop;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
-    public static MainManager Instance;
+    public static MainManager instance;
     public static int coinCounter = 0;
 
     private void Awake()
     {
-        if (Instance != null)
+        if (instance != null)
         {
             Destroy(gameObject);
             return;
         }
-        Instance = this;
+        instance = this;
         DontDestroyOnLoad(gameObject);
     }
     
