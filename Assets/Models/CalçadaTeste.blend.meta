@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 84d80b00eeb383c46b109dd3daa7ac10
+guid: c0df894fbace58845becfc09774bd582
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Cal\xE7adaTeste"
+    second: {fileID: 2100000, guid: 22bd2fef4221d2342a14f295a4ea18a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: f738e9bce9e614b4297a7cb793758975, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
