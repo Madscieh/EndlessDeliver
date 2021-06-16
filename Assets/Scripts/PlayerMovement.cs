@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
     // Declaracao de variaveis:
     // 1) Rigidbody: componente do objeto onde a fisica acontece
     [SerializeField] private Rigidbody rb;
+    // 2) 
     // 2) Controle Horizontal:
     private float _horizontalInput;
     // 3) Velocidades:
@@ -45,9 +46,11 @@ public class PlayerMovement : MonoBehaviour
         }
         */
 
-        Input.GetKeyDown(Space)
+        /*
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-
+            GameObject projectile = Instantiate()
         }
+        */
     }
 }
