@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class EndOfSceneSpawnerController : MonoBehaviour
+public class SpawnerController : MonoBehaviour
 {
     // Declaracao de variaveis:
     // 1) Velocidade:

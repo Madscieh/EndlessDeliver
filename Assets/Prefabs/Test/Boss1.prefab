@@ -137,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4fbe246504c3fe499715cd63260b5ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectile: {fileID: 5412770628918300602, guid: 9df81bfa9c8a066498daed91ca4a66a2,
+    type: 3}
   _lanePosition:
   - {x: -1.7, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
