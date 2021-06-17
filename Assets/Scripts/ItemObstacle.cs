@@ -5,6 +5,11 @@ public class ItemObstacle : MonoBehaviour
 {
     private AudioSource _audio;
 
+    private void Start()
+    {
+        _audio = GetComponent<AudioSource>();
+    }
+
     private void FixedUpdate()
     {
         transform.rotation = Quaternion.Euler(0, 75 * Time.time, 0);
@@ -12,9 +17,12 @@ public class ItemObstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // _audio.Play();
-        Invoke(nameof(LoadMenu), .2f);
-        Destroy(gameObject, .2f);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // _audio.Play();
+            Invoke(nameof(LoadMenu), .2f);
+            Destroy(gameObject, .2f);
+        }
     }
 
     private void LoadMenu()

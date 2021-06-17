@@ -932,6 +932,12 @@ PrefabInstance:
       propertyPath: distance
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 7523117050229504490, guid: a63d7838a38bef84b98cb2dcbceb0866,
+        type: 3}
+      propertyPath: _projectile
+      value: 
+      objectReference: {fileID: 8657548326118602205, guid: 9b99753521594bc4cabe14fe090aaf04,
+        type: 3}
     - target: {fileID: 7523117050229504491, guid: a63d7838a38bef84b98cb2dcbceb0866,
         type: 3}
       propertyPath: m_LocalPosition.x

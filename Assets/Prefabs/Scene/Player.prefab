@@ -74,6 +74,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 5719116450097049472}
+  _projectile: {fileID: 5412770628918300602, guid: 9df81bfa9c8a066498daed91ca4a66a2,
+    type: 3}
 --- !u!1001 &1935780718332904440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -150,6 +152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainCharacterTextura
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 99e8b2062268fd340beb279d37ff3cd0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1350270225205255384, guid: 99e8b2062268fd340beb279d37ff3cd0,
         type: 3}

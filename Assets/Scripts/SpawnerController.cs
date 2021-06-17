@@ -12,9 +12,9 @@ public class SpawnerController : MonoBehaviour
     [SerializeField] private GameObject _boss;
     // 4) Posicao inicial:
     private Vector3 _initialPosition = new Vector3( 0f, 0f, 80f);
-    // 5) Posicoes das pista:
+    // 5) Posicoes das pistas:
     [SerializeField] private Vector3[] _lanePosition;
-    // 6) Marcadores de tempo para instanciacao de items:
+    // 6) Marcadores de tempo para items:
     private readonly float _timeInstantiation = .5f;
     private float _timeInterval = 0f;
     private float _timeLast = 0f;
@@ -25,7 +25,7 @@ public class SpawnerController : MonoBehaviour
 
     private void Awake()
     {
-        // Posicao do Spawner no final da cena
+        // Posicao do Spawner na cena
         transform.position = _initialPosition;
     }
 

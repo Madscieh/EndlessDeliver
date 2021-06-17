@@ -17,9 +17,12 @@ public class BuildingsRight : MonoBehaviour
     // com quem o jogador acabou de colidir com delay de 2s
     private void OnTriggerExit(Collider other)
     {
-        // Cria buildings com funcao SpawnBuilding do script BuildingSpawner
-        _buildingSpawnerRight.SpawnBuildingRight();
-        // Destroi building colidido, com espera de 2s
-        Destroy(gameObject, 2);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // Cria buildings com funcao SpawnBuilding do script BuildingSpawner
+            _buildingSpawnerRight.SpawnBuildingRight();
+            // Destroi building colidido, com espera de 2s
+            Destroy(gameObject, 2);
+        }
     }
 }

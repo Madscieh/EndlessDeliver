@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8380506216830218670}
   - component: {fileID: 8380506216830218669}
   - component: {fileID: 8380506216830218668}
-  - component: {fileID: 8380506216830218667}
+  - component: {fileID: 3041617884188644472}
+  - component: {fileID: 2812855886640685595}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -80,7 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8380506216830218667
+--- !u!65 &3041617884188644472
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,11 +89,30 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8380506216830218666}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2812855886640685595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8380506216830218666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fbe246504c3fe499715cd63260b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tf: {fileID: 8380506217625867522}
+  _projectile: {fileID: 5412770628918300602, guid: 9df81bfa9c8a066498daed91ca4a66a2,
+    type: 3}
+  _lanePosition:
+  - {x: -1.7, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 1.7, y: 0, z: 0}
 --- !u!1 &8380506217625867521
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +122,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8380506217625867522}
-  - component: {fileID: 1214775724995222715}
   m_Layer: 0
   m_Name: Boss1
   m_TagString: Untagged
@@ -125,21 +144,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1214775724995222715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8380506217625867521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4fbe246504c3fe499715cd63260b5ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _projectile: {fileID: 5412770628918300602, guid: 9df81bfa9c8a066498daed91ca4a66a2,
-    type: 3}
-  _lanePosition:
-  - {x: -1.7, y: 0, z: 0}
-  - {x: 0, y: 0, z: 0}
-  - {x: 1.7, y: 0, z: 0}

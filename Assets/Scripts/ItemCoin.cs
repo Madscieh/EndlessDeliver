@@ -8,6 +8,7 @@ public class ItemCoin : MonoBehaviour
     {
         _audio = GetComponent<AudioSource>();
     }
+
     private void FixedUpdate()
     {
         transform.rotation = Quaternion.Euler(0, 75 * Time.time, 0);
@@ -15,8 +16,11 @@ public class ItemCoin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        MainManager.instance.ContadorDeMoedas();
-        _audio.Play();
-        Destroy(gameObject, .2f);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            MainManager.instance.ContadorDeMoedas();
+            _audio.Play();
+            Destroy(gameObject, .2f);
+        }
     }
 }

@@ -3,31 +3,29 @@
 public class PlayerMovement : MonoBehaviour
 {
     // Declaracao de variaveis:
-    // 1) Rigidbody: componente do objeto onde a fisica acontece
+    // 1) Rigidbody do Player:
     [SerializeField] private Rigidbody rb;
     // 2) Projetil:
     [SerializeField] private GameObject _projectile;
-    // 3) Velocidade do projetil:
-    private readonly float speedProjectile = 10;
-    // 2) Controle Horizontal:
+    // 3) Controle Horizontal:
     private float _horizontalInput;
-    // 3) Velocidades:
+    // 4) Velocidades do player:
     private readonly float speedForward = 8;
     private readonly float speedHorizontal = 8;
+    // 5) Marcadores de tempo para projetil:
+    private readonly float _timeInstantiation = .5f;
+    private float _timeInterval = 0f;
+    private float _timeLast = 0f;
+    // 6) Velocidade do projetil:
+    private readonly float speedProjectile = 15;
 
-    /* Obs.: sem condicao de parada por distancia
-    // 4) Distancia: para controlar indiretamente a duracao
-    private readonly float distance = 500f;
-    */
-
-    // Funcao que implementa o movimento na cena
+    // Funcao que implementa o movimento do jogador
     private void Update()
     {
         // Input Horizontal Padrão da Unity: a = esquerda, d = direita
         _horizontalInput = Input.GetAxis("Horizontal");
 
         // Componentes vetoriais do movimento:
-
         // 1) Componente profundidade (eixo z: frente = positivo)
         Vector3 forwardMove = transform.forward * speedForward * Time.deltaTime;
         // 2) Componente horizontal (eixo x: direita = positivo)
@@ -35,25 +33,14 @@ public class PlayerMovement : MonoBehaviour
         // 3) Movimento Resultante:
         rb.MovePosition(rb.position + forwardMove + horizontalMove);
 
-        /* Obs.: sem condicao de parada por distancia
-        // Condicao de parada: rb.transform.position.z >= distance
-        if (rb.transform.position.z < distance)
+        // Funcao que implementa o projetil
+        _timeInterval = Time.time - _timeLast;
+        if (Input.GetKeyDown(KeyCode.Space) && _timeInterval >= _timeInstantiation)
         {
-            // 3) Movimento Resultante:
-            rb.MovePosition(rb.position + forwardMove + horizontalMove);
-        }
-        else
-        {
-            // 3) Movimento Resultante (só na horizontal):
-            rb.MovePosition(rb.position + horizontalMove);
-        }
-        */
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject projectile = Instantiate(_projectile, transform.position, Quaternion.identity);
+            GameObject projectile = Instantiate(_projectile, rb.transform.position + transform.forward * 2, Quaternion.identity);
             projectile.GetComponent<Rigidbody>().velocity = speedProjectile * transform.forward;
-            Destroy(projectile, 3f);
+            Destroy(projectile, 15f);
+            _timeLast = Time.time;
         }
     }
 }
