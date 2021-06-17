@@ -5,7 +5,10 @@ public class PlayerMovement : MonoBehaviour
     // Declaracao de variaveis:
     // 1) Rigidbody: componente do objeto onde a fisica acontece
     [SerializeField] private Rigidbody rb;
-    // 2) 
+    // 2) Projetil:
+    [SerializeField] private GameObject _projectile;
+    // 3) Velocidade do projetil:
+    private readonly float speedProjectile = 10;
     // 2) Controle Horizontal:
     private float _horizontalInput;
     // 3) Velocidades:
@@ -46,11 +49,11 @@ public class PlayerMovement : MonoBehaviour
         }
         */
 
-        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject projectile = Instantiate()
+            GameObject projectile = Instantiate(_projectile, transform.position, Quaternion.identity);
+            projectile.GetComponent<Rigidbody>().velocity = speedProjectile * transform.forward;
+            Destroy(projectile, 3f);
         }
-        */
     }
 }
