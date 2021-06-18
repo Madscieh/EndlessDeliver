@@ -3,6 +3,8 @@
 public class PlayerMovement : MonoBehaviour
 {
     // Declaracao de variaveis:
+    public Animator animator;
+
     // 1) Rigidbody do Player:
     [SerializeField] private Rigidbody rb;
     // 2) Projetil:
@@ -41,6 +43,26 @@ public class PlayerMovement : MonoBehaviour
             projectile.GetComponent<Rigidbody>().velocity = speedProjectile * transform.forward;
             Destroy(projectile, 15f);
             _timeLast = Time.time;
+        }
+    }
+
+    //atualização do movimento da torre de pizza
+    private void FixedUpdate()
+    {
+        //pressionou o botão para esquerda
+       if ( _horizontalInput <0)
+        {
+            Debug.Log("Esquerda");
+            animator.SetBool("VaiEsq", true);   //move a torre de pizza para direita
+        }else if(_horizontalInput > 0) //pressionou botão para direita
+        {
+            Debug.Log("Direita");
+            animator.SetBool("VaiDir", true);  //move a torre de pizza para a esquerda
+        }
+        else   //torre de pizza parada
+        {
+            animator.SetBool("VaiEsq", false);
+            animator.SetBool("VaiDir", false);
         }
     }
 }
