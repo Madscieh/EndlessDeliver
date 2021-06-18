@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   building:
-  - {fileID: 5332031091379300714, guid: 7e7558980fc0f25408a2357d5b3280d1, type: 3}
-  - {fileID: 2419482044538985286, guid: 10d8b5dcfb722db4d99d31131c1dfa9c, type: 3}
-  - {fileID: 3052714545566932122, guid: c651a5a4d6668604b8debac0323ae3b6, type: 3}
-  - {fileID: 5569971997105343452, guid: 876a76145380e92468da373ca8a2404c, type: 3}
+  - {fileID: 7930676296136061083, guid: ac39a0aaa48fe394c913e6c1dab55fe9, type: 3}
+  - {fileID: 6643066681595229643, guid: 2d04001fc7b8b7a4da84db2bacd5756e, type: 3}
+  - {fileID: 3642658784166599282, guid: 98e538ddfc5f8814ba9c6fd3ba03e2a4, type: 3}
+  - {fileID: 6701931598555801279, guid: dacee2f045d29ff4081783e3c768ee77, type: 3}

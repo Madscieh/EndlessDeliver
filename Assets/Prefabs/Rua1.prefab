@@ -194,6 +194,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: estrada1
       objectReference: {fileID: 0}
+    - target: {fileID: 1812299610027767340, guid: 46cf49ab06570234e946e483853c1f69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681951453960601138, guid: 46cf49ab06570234e946e483853c1f69,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46cf49ab06570234e946e483853c1f69, type: 3}
 --- !u!4 &6717989072307583632 stripped

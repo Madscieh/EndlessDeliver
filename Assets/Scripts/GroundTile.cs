@@ -17,10 +17,13 @@ public class GroundTile : MonoBehaviour
     // com quem o jogador acabou de colidir com delay de 2s
     private void OnTriggerExit(Collider other)
     {
-        // Cria tile com funcao SpawnTile do script GroundSpawner
-        groundSpawner.SpawnTile();
-        // Destroi tile colidido, com espera de 2s
-        Destroy(gameObject, 2);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            // Cria tile com funcao SpawnTile do script GroundSpawner
+            groundSpawner.SpawnTile();
+            // Destroi tile colidido, com espera de 2s
+            Destroy(gameObject, 2);
+        }
     }
 
 }

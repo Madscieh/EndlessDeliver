@@ -4,12 +4,12 @@ public class GroundSpawner : MonoBehaviour
 {
     // Declaracao de variaveis:
     // 1) Unidade basica da pista (tile)
-    public GameObject groundTile;
+    [SerializeField] private GameObject groundTile;
     // 2) Posicao onde termina um tile e comeca o proximo
     private Vector3 nextSpawnPoint;
     // 3) Numero inicial de tiles a ser mantido no jogo
     // na medida em que outros são criados na frente e destruidos atras
-    private int numberOfTiles = 12;
+    private int numberOfTiles = 20;
 
     // Funcao que instancia novos tiles na cena
     // Obs: eh utilizada no script GroundTile, por isso eh public
@@ -33,5 +33,4 @@ public class GroundSpawner : MonoBehaviour
             SpawnTile();
         }
     }
-
 }
