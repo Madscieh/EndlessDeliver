@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1108616259145354842}
   - component: {fileID: 1108616259145354837}
   m_Layer: 0
-  m_Name: EndOfSceneSpawner
+  m_Name: ItemsSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,6 +46,7 @@ MonoBehaviour:
   _items:
   - {fileID: 6822654758394730730, guid: 9be28cd968f3e544d852b8d82bcfa60c, type: 3}
   - {fileID: 8713612285005997554, guid: a87017146c7639d428131e33015f9367, type: 3}
+  _boss: {fileID: 0}
   _lanePosition:
   - {x: -1.7, y: 1, z: 0}
   - {x: 0, y: 1, z: 0}

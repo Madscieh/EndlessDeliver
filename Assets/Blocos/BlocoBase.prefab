@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7216311370484296796}
+  - component: {fileID: 6720817247770474919}
+  - component: {fileID: 2933379122513219632}
+  - component: {fileID: 3930265175032181308}
   m_Layer: 0
   m_Name: BlocoBase
   m_TagString: Untagged
@@ -56,6 +59,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6720817247770474919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130596793821745974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.5, y: 0.5, z: 39.4}
+  m_Center: {x: -12.5, y: 18.56, z: 0.92}
+--- !u!65 &2933379122513219632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130596793821745974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10, z: 39.4}
+  m_Center: {x: -15.75, y: 23.8, z: 0.92}
+--- !u!65 &3930265175032181308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130596793821745974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 10, z: 39.4}
+  m_Center: {x: -9.26, y: 23.8, z: 0.92}
 --- !u!1 &5123443081799824241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1594,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rua1 (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5417090757268978361, guid: e70173b9e15bbab498586acc8427d669, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e70173b9e15bbab498586acc8427d669, type: 3}
 --- !u!4 &1116393418361958792 stripped
 Transform:

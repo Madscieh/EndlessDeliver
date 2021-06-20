@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5727475924708243369
+--- !u!1 &8429862640133775717
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5727475924708243375}
-  - component: {fileID: 5727475924708243368}
+  - component: {fileID: 8429862640133775715}
+  - component: {fileID: 8429862640133775714}
   m_Layer: 0
-  m_Name: BuildingSpawnerLeft
+  m_Name: SceneSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5727475924708243375
+--- !u!4 &8429862640133775715
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5727475924708243369}
+  m_GameObject: {fileID: 8429862640133775717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,20 +31,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5727475924708243368
+--- !u!114 &8429862640133775714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5727475924708243369}
+  m_GameObject: {fileID: 8429862640133775717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5503a2914974d74babf26988d0f4305, type: 3}
+  m_Script: {fileID: 11500000, guid: f1530f1122ef81b489e47ed951670cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building:
-  - {fileID: 7930676296136061083, guid: ac39a0aaa48fe394c913e6c1dab55fe9, type: 3}
-  - {fileID: 6643066681595229643, guid: 2d04001fc7b8b7a4da84db2bacd5756e, type: 3}
-  - {fileID: 3642658784166599282, guid: 98e538ddfc5f8814ba9c6fd3ba03e2a4, type: 3}
-  - {fileID: 6701931598555801279, guid: dacee2f045d29ff4081783e3c768ee77, type: 3}
+  blocks:
+  - {fileID: 3760335600025150424, guid: f0d2ab5d9319ef64aae46582c127a596, type: 3}
+  - {fileID: 289598142050185844, guid: 86c39bafbfe832842bb8d7fcd751283d, type: 3}
+  - {fileID: 3648975527950895643, guid: 41221814bc59dc94c9be6563097cbb7c, type: 3}
+  - {fileID: 6838635888056930171, guid: eac37610c744cdd468a07e69feb2fe58, type: 3}
+  - {fileID: 1066240903818076879, guid: ff88dd304e30e7e4a9d6ce0a4783edd1, type: 3}
