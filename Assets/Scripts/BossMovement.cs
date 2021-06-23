@@ -1,11 +1,15 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BossMovement : MonoBehaviour
 {
     // Declaracao de variaveis:
     // 1) Transform do Boss:
     [SerializeField] private Transform tf;
+    // 2) Animator do Boss:
+    [SerializeField] private Animator _animator;
     // 2) Velocidade do Boss (igual a do Player):
     private readonly float speedForward = 8;
     // 3) Vida do Boss:
@@ -20,6 +24,15 @@ public class BossMovement : MonoBehaviour
     private float _timeLast = 0f;
     // 7) Velocidade do projetil:
     private readonly float speedProjectile = -15;
+    // 8) Botao de KillBoss:
+    private GameObject _killBossButton;
+
+    // Inicializa variaveis _animator e _killBossButton
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        // _killBossButton = GameObject.Find("/Canvas/KillBoss");
+    }
 
     // Funcao que implementa o movimento do boss
     private void Update()
@@ -33,25 +46,31 @@ public class BossMovement : MonoBehaviour
         // 3) Movimento Resultante:
         transform.position = forwardMove + horizontalMove;
 
+        // Funcao que implementa o projetil
+        // Condicao de tempo para limitar a frequencia dos tiros
         _timeInterval = Time.time - _timeLast;
         if (_timeInterval >= _timeInstantiation)
         {
+            // Instancia o projetil um pouco para tras (subtrai transform.forward * 2)
             GameObject projectile = Instantiate(_projectile, tf.transform.position - transform.forward * 2, Quaternion.identity);
+            // Deixa o projetil com velocidade speedProjectile (<0) para tras
             projectile.GetComponent<Rigidbody>().velocity = speedProjectile * transform.forward;
+            // Atualiza a condicao de tempo
             _timeLast = Time.time;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Projectile"))
-        {
+        // Funcao que implementa dano
+        if (other.gameObject.CompareTag("Projectile") && _healthBoss > 0)
             _healthBoss--;
-        }
 
+        // Funcao que habilita o _killBossButton (ver script UIManager)
+        // obs.: por ora, comeca habilitado
         if (_healthBoss <= 0)
         {
-            SceneManager.LoadScene(0);
+            // _killBossButton.SetActive(true);
         }
     }
 }

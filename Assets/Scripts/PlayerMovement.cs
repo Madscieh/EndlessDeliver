@@ -3,8 +3,6 @@
 public class PlayerMovement : MonoBehaviour
 {
     // Declaracao de variaveis:
-    public Animator animator;
-
     // 1) Rigidbody do Player:
     [SerializeField] private Rigidbody rb;
     // 2) Projetil:
@@ -20,7 +18,11 @@ public class PlayerMovement : MonoBehaviour
     private float _timeLast = 0f;
     // 6) Velocidade do projetil:
     private readonly float speedProjectile = 15;
-
+    // 7) Animator do jogador:
+    public Animator _animatorPlayer;
+    // 8) Animator das pizzas:
+    public Animator animator;
+    
     // Funcao que implementa o movimento do jogador
     private void Update()
     {
@@ -49,24 +51,27 @@ public class PlayerMovement : MonoBehaviour
             // Atualiza a condicao de tempo
             _timeLast = Time.time;
         }
-    }
 
-    //atualização do movimento da torre de pizza
-    private void FixedUpdate()
-    {
-        //pressionou o botão para esquerda
+        // Animacao das pizzas
+        // Jogador vai para esquerda -> pizzas para direita
         if (_horizontalInput < 0)
         {
-            animator.SetBool("VaiEsq", true);   //move a torre de pizza para direita
+            animator.SetBool("VaiEsq", true);
+            _animatorPlayer.SetBool("Left", true);
         }
-        else if (_horizontalInput > 0) //pressionou botão para direita
+        // Jogador vai para direita -> pizzas para a esquerda
+        else if (_horizontalInput > 0)
         {
-            animator.SetBool("VaiDir", true);  //move a torre de pizza para a esquerda
+            animator.SetBool("VaiDir", true);
+            _animatorPlayer.SetBool("Right", true);
         }
-        else   //torre de pizza parada
+        // Jogador parado
+        else
         {
             animator.SetBool("VaiEsq", false);
             animator.SetBool("VaiDir", false);
+            _animatorPlayer.SetBool("Left", false);
+            _animatorPlayer.SetBool("Right", false);
         }
     }
 }
