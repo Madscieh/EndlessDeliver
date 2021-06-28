@@ -5,9 +5,10 @@ public class ItemObstacle : MonoBehaviour
 {
     private AudioSource _audio;
 
-    private void Start()
+    private void Awake()
     {
         _audio = GetComponent<AudioSource>();
+        Destroy(gameObject, 8f);
     }
 
     private void OnTriggerEnter(Collider other)

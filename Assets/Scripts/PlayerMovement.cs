@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     // 3) Controle Horizontal:
     private float _horizontalInput;
     // 4) Velocidades do player:
-    private readonly float speedForward = 8;
+    public float speedForward = 8;
     private readonly float speedHorizontal = 8;
     // 5) Marcadores de tempo para projetil:
     private readonly float _timeInstantiation = .3f;
@@ -19,12 +19,12 @@ public class PlayerMovement : MonoBehaviour
     // 6) Velocidade do projetil:
     private readonly float speedProjectile = 15;
     // 7) Animator do jogador:
-    public Animator _animatorPlayer;
-    // 8) Animator das pizzas:
-    public Animator animator;
-    
+    public Animator animatorPlayer;
+    // 8) Bool para vericar se esta no chao para poder pular:
+    private bool _isGrounded = true;
+
     // Funcao que implementa o movimento do jogador
-    private void Update()
+    private void FixedUpdate()
     {
         // Input Horizontal Padrão da Unity: a = esquerda, d = direita
         _horizontalInput = Input.GetAxis("Horizontal");
@@ -37,10 +37,43 @@ public class PlayerMovement : MonoBehaviour
         // 3) Movimento Resultante:
         rb.MovePosition(rb.position + forwardMove + horizontalMove);
 
-        // Funcao que implementa o projetil
-        // Condicao de tempo para limitar a frequencia dos tiros
+        // Verifica se esta no chao antes de pular
+        _isGrounded = Physics.Raycast(rb.position, Vector3.down, 1f, LayerMask.GetMask("Ground"));
+
+        Debug.Log(_isGrounded);
+
+        // Salto:
+        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+        {
+            // Salto por AddForce
+            rb.AddForce(transform.up * 300);
+        }
+
+        // Animacao das pizzas
+        // Jogador vai para esquerda -> pizzas para direita
+        if (_horizontalInput < 0)
+        {
+            animatorPlayer.SetBool("Left", true);
+        }
+        // Jogador vai para direita -> pizzas para a esquerda
+        else if (_horizontalInput > 0)
+        {
+            animatorPlayer.SetBool("Right", true);
+        }
+        // Jogador parado
+        else
+        {
+            animatorPlayer.SetBool("Left", false);
+            animatorPlayer.SetBool("Right", false);
+        }
+    }
+
+    // Funcao que implementa o projetil
+    // Condicao de tempo para limitar a frequencia dos tiros
+    public void DeliveryTime()
+    {
         _timeInterval = Time.time - _timeLast;
-        if (Input.GetKeyDown(KeyCode.Space) && _timeInterval >= _timeInstantiation)
+        if (_timeInterval >= _timeInstantiation)
         {
             // Instancia o projetil um pouco para a frente (soma transform.forward * 2)
             GameObject projectile = Instantiate(_projectile, rb.transform.position + transform.forward * 2, Quaternion.identity);
@@ -50,28 +83,6 @@ public class PlayerMovement : MonoBehaviour
             Destroy(projectile, 15f);
             // Atualiza a condicao de tempo
             _timeLast = Time.time;
-        }
-
-        // Animacao das pizzas
-        // Jogador vai para esquerda -> pizzas para direita
-        if (_horizontalInput < 0)
-        {
-            animator.SetBool("VaiEsq", true);
-            _animatorPlayer.SetBool("Left", true);
-        }
-        // Jogador vai para direita -> pizzas para a esquerda
-        else if (_horizontalInput > 0)
-        {
-            animator.SetBool("VaiDir", true);
-            _animatorPlayer.SetBool("Right", true);
-        }
-        // Jogador parado
-        else
-        {
-            animator.SetBool("VaiEsq", false);
-            animator.SetBool("VaiDir", false);
-            _animatorPlayer.SetBool("Left", false);
-            _animatorPlayer.SetBool("Right", false);
         }
     }
 }

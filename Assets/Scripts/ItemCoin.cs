@@ -4,9 +4,10 @@ public class ItemCoin : MonoBehaviour
 {
     private AudioSource _audio;
 
-    private void Start()
+    private void Awake()
     {
         _audio = GetComponent<AudioSource>();
+        Destroy(gameObject, 8f);
     }
 
     private void FixedUpdate()
