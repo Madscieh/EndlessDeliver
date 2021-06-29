@@ -167,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5115354172264391943}
-  - component: {fileID: 1755039909166334662}
+  - component: {fileID: 2325968345376890952}
   m_Layer: 0
   m_Name: CovidMonsterFinal
   m_TagString: Untagged
@@ -183,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5599860174963736509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.572281, y: 1.3165703, z: 21.479996}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5567596295746670402}
@@ -191,7 +191,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1755039909166334662
+--- !u!95 &2325968345376890952
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ Animator:
   m_GameObject: {fileID: 5599860174963736509}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6a2de719606d8364e8b0ff4f3934e51b, type: 2}
+  m_Controller: {fileID: 9100000, guid: f35fc5d7b19c59d408d168c04d821857, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
