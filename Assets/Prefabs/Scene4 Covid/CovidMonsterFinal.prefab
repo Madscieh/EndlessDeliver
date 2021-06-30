@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2478664590681806140}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.00000003090862, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.99205303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5115354172264391943}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!33 &883558880137969537
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -104,13 +104,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3854592242199791805}
-  m_LocalRotation: {x: -0.7071067, y: -0.000000030908616, z: 0.00000003090862, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.99205303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5115354172264391943}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!33 &1708367629093539581
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -168,6 +168,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5115354172264391943}
   - component: {fileID: 2325968345376890952}
+  - component: {fileID: 2867794307047777004}
+  - component: {fileID: 8498394014716373563}
   m_Layer: 0
   m_Name: CovidMonsterFinal
   m_TagString: Untagged
@@ -210,3 +212,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2867794307047777004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599860174963736509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4fbe246504c3fe499715cd63260b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tf: {fileID: 5115354172264391943}
+  _bossAnimator: {fileID: 2325968345376890952}
+  _player: {fileID: 415607739738628617, guid: c6896345f5c33724694bbe1c1a803cd7, type: 3}
+  playerMovement: {fileID: 6297324279289428408, guid: c6896345f5c33724694bbe1c1a803cd7,
+    type: 3}
+  _projectile: {fileID: 8134578043306661207, guid: 35f422ff4c7e4c645806cae530d6e692,
+    type: 3}
+  _lanePosition:
+  - {x: -1.7, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 1.7, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  _sceneNumber: 8
+--- !u!65 &8498394014716373563
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5599860174963736509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -4163,12 +4163,14 @@ MonoBehaviour:
   _player: {fileID: 415607739738628617, guid: c6896345f5c33724694bbe1c1a803cd7, type: 3}
   playerMovement: {fileID: 6297324279289428408, guid: c6896345f5c33724694bbe1c1a803cd7,
     type: 3}
-  _projectile: {fileID: 5412770628918300602, guid: 9df81bfa9c8a066498daed91ca4a66a2,
+  _projectile: {fileID: 1809248118230834654, guid: dc4fb89058005714991e5e988ba6d9ea,
     type: 3}
   _lanePosition:
   - {x: -1.7, y: 1, z: 0}
   - {x: 0, y: 1, z: 0}
   - {x: 1.7, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  _sceneNumber: 7
 --- !u!1 &7248647804671754032
 GameObject:
   m_ObjectHideFlags: 0

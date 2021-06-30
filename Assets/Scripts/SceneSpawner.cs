@@ -9,7 +9,7 @@ public class SceneSpawner : MonoBehaviour
     private Vector3 _nextSpawnPoint;
     // 3) Numero inicial de predios a ser mantido no jogo
     // na medida em que outros sao criados na frente e destruidos atras
-    private readonly int numberOfBuildings = 5;
+    private readonly int numberOfBlocks = 3;
 
     // Funcao que instancia novos predios na cena
     // Obs: eh utilizada no script Buildings, por isso eh public
@@ -26,7 +26,7 @@ public class SceneSpawner : MonoBehaviour
     private void Start()
     {
         // Loop com numero predefinido de tiles
-        for (int i = 0; i < numberOfBuildings; i++)
+        for (int i = 0; i < numberOfBlocks; i++)
         {
             // Chama as funcao SpawnBlocks()
             SpawnBlocks();

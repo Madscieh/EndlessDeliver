@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -19,7 +17,7 @@ public class UIManager : MonoBehaviour
     public static bool activateUI;
     // 7) Variaveis do Timer:
     private float _currentTime;
-    private float _startingTime = 60f;
+    private float _startingTime = 30f;
     [SerializeField] private Text _timerText;
 
     private void Awake()
@@ -59,22 +57,4 @@ public class UIManager : MonoBehaviour
             _pause = false;
         }
     }
-
-    public void DeliveryTime()
-    {
-        _delivery--;
-        if (_delivery <= 0)
-        {
-            SceneManager.LoadScene(0);
-            // StartCoroutine(EndLevel());
-        }
-    }
-
-    private IEnumerator EndLevel()
-    {
-        _animator.SetBool("Die", true);
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(0);
-    }
-
 }

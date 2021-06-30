@@ -40,13 +40,11 @@ public class PlayerMovement : MonoBehaviour
         // Verifica se esta no chao antes de pular
         _isGrounded = Physics.Raycast(rb.position, Vector3.down, 1f, LayerMask.GetMask("Ground"));
 
-        Debug.Log(_isGrounded);
-
         // Salto:
-        if (Input.GetKeyDown(KeyCode.Space) && _isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space)/* && _isGrounded*/)
         {
             // Salto por AddForce
-            rb.AddForce(transform.up * 300);
+            rb.AddForce(transform.up * 50);
         }
 
         // Animacao das pizzas

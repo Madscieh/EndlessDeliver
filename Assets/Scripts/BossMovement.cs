@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class BossMovement : MonoBehaviour
 {
@@ -20,18 +18,25 @@ public class BossMovement : MonoBehaviour
     [SerializeField] private GameObject _projectile;
     // 7) Posicoes das pistas:
     [SerializeField] private Vector3[] _lanePosition;
-    // 8) Marcadores de tempo para projetil:
-    private readonly float _timeInstantiation = 1f;
+    // 8) Marcadores de tempo para loop:
+    private readonly float _timeInstantiation = 3f;
     private float _timeInterval = 0f;
     private float _timeLast = 0f;
     // 9) Velocidade do projetil:
-    private readonly float speedProjectile = -15;
+    private readonly float speedProjectile = -10;
+    // 10) Componente horizontal do movimento:
+    private Vector3 _horizontalMove;
+    // 11) Componente vertical do movimento:
+    private Vector3 _verticalMove;
+    // 12) Numero da cena a ser chamada apos derrotar o boss:
+    [SerializeField] private int _sceneNumber;
 
     // Inicializa variaveis _animator e _killBossButton
     private void Awake()
     {
         _bossAnimator = GetComponent<Animator>();
         playerMovement = _player.GetComponent<PlayerMovement>();
+        _verticalMove = transform.position;
     }
 
     // Funcao que implementa o movimento do boss
@@ -39,11 +44,13 @@ public class BossMovement : MonoBehaviour
     {
         // Componentes vetoriais do movimento:
         // 1) Componente profundidade (eixo z: frente = positivo)
-        Vector3 forwardMove = transform.position + transform.forward * playerMovement.speedForward * Time.deltaTime;
+        _verticalMove += Vector3.forward * playerMovement.speedForward * Time.deltaTime;
         // 2) Componente horizontal (eixo x: direita = positivo)
-        Vector3 horizontalMove = Vector3.zero;
+        _horizontalMove = Vector3.MoveTowards(_horizontalMove, _lanePosition[0], .1f);
+        if (Vector3.Distance(_horizontalMove, _lanePosition[0]) < .1f)
+            _lanePosition[0] *= -1.0f;
         // 3) Movimento Resultante:
-        transform.position = forwardMove + horizontalMove;
+        transform.position = _verticalMove + _horizontalMove;
 
         // Funcao que implementa o projetil
         // Condicao de tempo para limitar a frequencia dos tiros
@@ -61,9 +68,8 @@ public class BossMovement : MonoBehaviour
         // Funcao que habilita o _killBossButton (ver script UIManager)
         if (_healthBoss <= 0)
         {
-            UIManager.activateUI = true;
+            SceneManager.LoadScene(_sceneNumber);
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -72,6 +78,7 @@ public class BossMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Projectile"))
         {
             _healthBoss--;
+            Destroy(other);
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SpawnerControllerPizza : MonoBehaviour
 {
@@ -12,14 +11,11 @@ public class SpawnerControllerPizza : MonoBehaviour
     // 3) Lista de objetos:
     [SerializeField] private GameObject[] _items;
     // 4) Delivery:
-    [SerializeField] private GameObject _deliveryLeft;
-    [SerializeField] private GameObject _deliveryRight;
+    [SerializeField] private GameObject[] _client;
     // 5) Posicao inicial:
     private Vector3 _initialPosition = new Vector3(0f, 0f, 35f);
     // 6) Posicoes das pistas:
     [SerializeField] private Vector3[] _lanePosition;
-    // 7) Posicoes das calcadas:
-    [SerializeField] private Vector3[] _sidewalkPosition;
     // 7) Marcadores de tempo:
     private readonly float _timeInstantiation = .5f;
     private readonly float _timeDelivery = 2;
@@ -39,6 +35,7 @@ public class SpawnerControllerPizza : MonoBehaviour
 
     private void Update()
     {
+
         if (_spawnItems)
         {
             _timeInterval = Time.time - _timeLast;
@@ -55,7 +52,7 @@ public class SpawnerControllerPizza : MonoBehaviour
             _timeInterval = Time.time - _timeLast;
             if (_timeInterval >= _timeDelivery)
             {
-                transform.position = transform.position + transform.forward * playerMovementPizza.speedForward / 2f;
+                transform.position = transform.position + transform.forward * playerMovementPizza.speedForward * 2;
                 SpawnDelivery();
                 _timeLast = Time.time;
             }
@@ -71,10 +68,8 @@ public class SpawnerControllerPizza : MonoBehaviour
 
     public void SpawnDelivery()
     {
-        GameObject left = Instantiate(_deliveryLeft, _sidewalkPosition[0] + transform.position, Quaternion.identity);
-        GameObject right = Instantiate(_deliveryRight, _sidewalkPosition[1] + transform.position, Quaternion.identity);
-        Destroy(right, 3);
-        Destroy(left, 3);
+        GameObject temp = Instantiate(_client[Random.Range(0, _client.Length)], _lanePosition[Random.Range(0, _lanePosition.Length)] + transform.position + transform.forward * 35, Quaternion.identity);
+        Destroy(temp, 3);
     }
 
     private IEnumerator DeliveryTime()

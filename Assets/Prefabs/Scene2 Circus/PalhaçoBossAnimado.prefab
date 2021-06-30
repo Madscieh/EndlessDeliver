@@ -1969,19 +1969,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tf: {fileID: 8878839063925521998}
-  _animator: {fileID: 0}
+  _bossAnimator: {fileID: 7994359208977535691}
   _player: {fileID: 415607739738628617, guid: c6896345f5c33724694bbe1c1a803cd7, type: 3}
   playerMovement: {fileID: 6297324279289428408, guid: c6896345f5c33724694bbe1c1a803cd7,
     type: 3}
-  _projectile: {fileID: 5412770628918300602, guid: 9df81bfa9c8a066498daed91ca4a66a2,
+  _projectile: {fileID: 8271484622239109688, guid: a1da05a3fc93bf24f8e850d9c5e89d66,
     type: 3}
   _lanePosition:
   - {x: -1.7, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 1.7, y: 0, z: 0}
-  _canvas: {fileID: 7571246078430594179, guid: ba143180a87719a44852077746c272c2, type: 3}
-  uiManager: {fileID: 7571246078430594178, guid: ba143180a87719a44852077746c272c2,
-    type: 3}
+  _sceneNumber: 6
 --- !u!95 &7994359208977535691
 Animator:
   serializedVersion: 3
@@ -2012,7 +2010,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 3, z: 2}
+  m_Size: {x: 3, y: 4, z: 3}
   m_Center: {x: -0.15, y: 1, z: 0}
 --- !u!1 &8595582944710185019
 GameObject:
